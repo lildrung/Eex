@@ -49,24 +49,33 @@
             
             <p class="text-gray-600 mb-6">ใส่อีเมลของคุณเพื่อรับแจ้งเตือนเมื่อเพลงออกมาแล้ว!</p>
             
-            <form id="emailForm" class="space-y-4">
-                <div class="relative">
-                    <input 
-                        type="email" 
-                        id="email" 
-                        placeholder="อีเมลของคุณ"
-                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-purple-500 focus:outline-none transition-colors text-center"
-                        required
-                    >
-                </div>
-                
-                <button 
-                    type="submit"
-                    class="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
-                >
-                    🔔 แจ้งเตือนฉัน
-                </button>
-            </form>
+            <form 
+    name="notify" 
+    method="POST" 
+    data-netlify="true" 
+    id="emailForm" 
+    class="space-y-4"
+>
+    <input type="hidden" name="form-name" value="notify" />
+    
+    <div class="relative">
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="อีเมลของคุณ"
+            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-purple-500 focus:outline-none transition-colors text-center"
+            required
+        >
+    </div>
+    
+    <button 
+        type="submit"
+        class="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
+    >
+        🔔 แจ้งเตือนฉัน
+    </button>
+</form>
             
             <p class="text-sm text-gray-500 mt-4">
                 เราจะส่งแจ้งเตือนให้คุณ 2 ครั้ง:<br>
